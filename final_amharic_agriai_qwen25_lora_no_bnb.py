@@ -152,6 +152,7 @@ SHEET_NAME = "amharic_agriculture_finetune_expanded"
 USER_COL = "user"
 ASSISTANT_COL = "assistant"
 
+
 from google.colab import drive, auth
 import gspread
 from google.auth import default
@@ -330,7 +331,7 @@ TRAINING_CONFIG = {
     "LORA_R": 8,              # T4-safe. Increase to 16 only on A100.
     "LORA_ALPHA": 16,
     "LORA_DROPOUT": 0.05,
-    # ☢️ TO FIX REPETITIVE/GENERIC ANSWERS, CHANGE NUM_EPOCHS TO 3:
+    #  TO FIX REPETITIVE/GENERIC ANSWERS, CHANGE NUM_EPOCHS TO 3:
     "NUM_EPOCHS": 3,
     "BATCH_SIZE": 1,
     "GRAD_ACCUM": 16,
@@ -338,7 +339,7 @@ TRAINING_CONFIG = {
     "LOG_STEPS": 10,
     "SAVE_STEPS": 200,
     "EVAL_STEPS": 200,
-    # ☢️ TO GET THE BEST RESULTS, CHANGE THIS TO None TO USE ALL 52,000 ROWS:
+    #  TO GET THE BEST RESULTS, CHANGE THIS TO None TO USE ALL 52,000 ROWS:
     "MAX_TRAIN_SAMPLES": None
 }
 
